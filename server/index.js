@@ -19,10 +19,6 @@ app.use(
 
 app.use(morgan("dev"));
 
-//var Users = require("./routes/Users");
-
 app.use("/users", routes.auth);
 
-app.listen(PORT, () => {
-  console.log(`Server is running on PORT ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
